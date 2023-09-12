@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+/* Apply some basic styles to improve readability and alignment */
+.page-header {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-form label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Your existing CSS code */
+.search-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* Change to row to place elements side by side */
+  justify-content: center; /* Center the elements horizontally */
+  align-items: center;
+  height: 50px;
+}
+
+.search-form input[type="text"] {
+  padding: 0px 20px;
+  min-width: 300px;
+  width: 20%;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 30px;
+  height: 100%;
+  margin-right: 10px; /* Add margin between input and button */
+}
+
+.search-form input[type="submit"] {
+  height: 100%;
+  margin-top: 0px;
+  margin-left: 10px;
+  padding: 0px 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+  transition: background-color 0.2s;
+}
+
+.search-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.item p {
+  font-weight: bold;
+  font-size: 18px;
+}
+.item {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  flex-basis: 330px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+.item-target {
+  border: 2px solid #ff2600;
+}
+.item-walmart {
+  border: 2px solid #0071dc;
+}
+.item-image {
+  max-width: 180px;
+  height: auto;
+}
+a {
+  color: inherit; /* Inherit text color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Apply custom styling when hovering over links */
+a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+/* Style for the form container */
+.form-container {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Style for the label */
+.form-label {
+  font-weight: bold;
+}
+
+/* Style for the select dropdown */
+.form-select {
+  width: 200px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for the submit button */
+.form-submit {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+.form-submit:hover {
+  background-color: #0056b3;
+}

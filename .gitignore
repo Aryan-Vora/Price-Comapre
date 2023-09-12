@@ -1,0 +1,38 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+*.env
+
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+*.json
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.code-workspace
+
+# Local development configuration
+instance/
+
+# Logs and databases
+*.log
+*.db
+
+# Environment variables
+.env
+
+# Dependency directories
+lib/
+libs/
+dist/
+build/
+*.egg-info/
+flask_session/

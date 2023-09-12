@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <title>Compare Search Data</title>
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>Compare Search Data</h1>
+    </div>
+
+    <div class="search-form">
+      <form method="POST" action="/">
+        <input
+          type="text"
+          id="userInput"
+          name="userInput"
+          value="{{ user_input }}"
+        />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    {% if itemCount > 0 %}
+    <h1 style="text-align: center">
+      {{ itemCount }} results for "{{user_input}}"
+      <form action="/sort" method="POST" class="form-container">
+        <label for="sort-by" class="form-label">Sort By:</label>
+        <select name="sort-by" id="sort-by" class="form-select">
+          <option value="price" {% if selected_option == 'Price' %}selected{% endif %}>Price</option>
+          <option value="name" {% if selected_option == 'Name' %}selected{% endif %}>Name</option>
+          <option value="walmart" {% if selected_option == 'Walmart' %}selected{% endif %}>Walmart</option>
+          <option value="target" {% if selected_option == 'Target' %}selected{% endif %}>Target</option>
+          <option value="advanced" {% if selected_option == 'Advanced' %}selected{% endif %}>Advanced</option>
+        </select>
+        <input type="submit" value="Sort" class="form-submit" />
+      </form>
+    </h1>
+    {% endif %}
+    <div class="container">
+      {% for item in items %}
+      <a
+        href="{{ item.link }}"
+        target="_blank"
+        class="item item-{{ item.from|lower }}"
+      >
+        <img class="item-image" src="{{item.image}}" alt="{{ item.name }}" />
+        <h2>{{ item.name }}</h2>
+        <p>Price: ${{ item.price }}</p>
+        <p>Unit Price: {{item.unitPrice }}</p>
+        <p>Min Count: {{item.minShippingCount}}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </body>
+</html>
