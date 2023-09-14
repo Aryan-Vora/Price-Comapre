@@ -85,6 +85,3 @@ def parse_data(data):
 
                 })
     return list({item['name']: item for item in parsed_data}.values())
-
-
-print(parse_data(get_raw_data("shampoo")))
