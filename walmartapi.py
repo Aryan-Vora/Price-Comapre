@@ -47,6 +47,7 @@ def get_raw_data(search):
     # f = open("walmart_" + search.replace(" ", "_") + ".json", "a")
     # f.write(response.text)
     # f.close()
+    print(response.text)
     return response.json()
 
 
@@ -136,6 +137,5 @@ def parse_data(data):
                     "from": "Walmart"
 
                 })
-    print(parsed_data)
     return list({item['name']: item for item in parsed_data}.values())
 #    return sorted(parsed_data, key=lambda x: x["price"])
