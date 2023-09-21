@@ -1,3 +1,3 @@
 # Explorations
 Exploration repo
-https://explorations-246264175e3c.herokuapp.com/
+https://price-compare-ht5j.onrender.com/
